@@ -13,6 +13,8 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "incremental": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
     "plugins": [
       {
         "name": "next"
@@ -20,7 +22,8 @@
     ],
     "paths": {
       "@/*": ["./src/*"],
-      "@monorepo/ui/*": ["../../packages/ui/src/*"]
+      "@monorepo/ui/*": ["../../packages/ui/src/*"],
+      "@monorepo/core/*": ["../../packages/core/src/*"]
 
     }
   },
