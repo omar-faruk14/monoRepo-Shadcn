@@ -1,13 +1,14 @@
-// app/page.tsx
-import { Button } from "@ui/components/ui/button"
+import { Button } from "@monorepo/ui/components/ui/button";
 
-
-export default function Home() {
+export default function Page() {
   return (
-    <main className="p-8">
-      <Button variant="default">Black Button</Button>
 
+    <div className="flex items-center justify-center min-h-svh">
+      <div className="flex flex-col items-center justify-center gap-4">
+        <h1 className="text-2xl font-bold">Hello World</h1>
+        <Button size="sm">Button From UI</Button>
+      </div>
+    </div>
 
-    </main>
-  )
+  );
 }
