@@ -2,7 +2,10 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "@/*": ["./*"]
-    }
+      "@monorepo/ui/*": ["./src/*"]
+    },
+    "jsx": "react-jsx", //for JSX
+    "jsxImportSource": "react", 
+    
   }
 }
