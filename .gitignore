@@ -1,2 +1,4 @@
 #Remove All node modules
 node_modules
+
+.next

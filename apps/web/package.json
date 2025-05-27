@@ -9,16 +9,15 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@monorepo/core": "workspace:*",
+    "@monorepo/ui": "workspace:*",
     "next": "15.3.2",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "@monorepo/ui": "workspace:*"
+    "react-hook-form": "^7.56.4",
+    "reflect-metadata": "^0.2.2"
   },
   "devDependencies": {
-    "@eslint/eslintrc": "^3",
-    "autoprefixer": "^10.4.21",
-    "eslint": "^9",
-    "eslint-config-next": "15.3.2",
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
     "@types/react": "^19",
