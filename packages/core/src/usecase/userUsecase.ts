@@ -1,10 +1,11 @@
 import { inject, injectable } from "inversify";
+import TYPES from "../types";
 import { UserRepository } from "../adapter/userRepository";
 import bcrypt from "bcryptjs";
 
 @injectable()
 export class UserUsecase {
-  constructor(@inject("UserRepository") private repo: UserRepository) {}
+  constructor(@inject(TYPES.UserRepository) private repo: UserRepository) {}
 
   async register(email: string, password: string) {
     const existing = await this.repo.findByEmail(email);

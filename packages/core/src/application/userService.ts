@@ -1,4 +1,5 @@
 import { inject, injectable } from "inversify";
+import TYPES from "../types"; // ✅ import the symbols
 import { z } from "zod";
 import { UserUsecase } from "../usecase/userUsecase";
 
@@ -9,7 +10,9 @@ const AuthSchema = z.object({
 
 @injectable()
 export class UserService {
-  constructor(@inject(UserUsecase) private usecase: UserUsecase) {}
+  constructor(
+    @inject(TYPES.UserUsecase) private usecase: UserUsecase // ✅ USE SYMBOL
+  ) {}
 
   async registerFromApi(input: unknown) {
     const parsed = AuthSchema.parse(input);
